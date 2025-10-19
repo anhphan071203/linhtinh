@@ -12,7 +12,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #ffe6eb, #fff);
+      background: linear-gradient(135deg, #fff0f5, #ffe6eb);
       font-family: "Segoe UI", Arial, sans-serif;
       color: #4a2b32;
       text-align: center;
@@ -30,93 +30,11 @@
       color: #6a4b52;
     }
 
-    /* Trái tim */
+    /* TRÁI TIM CHUẨN */
     .heart {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       background: #ff4b5c;
       transform: rotate(-45deg);
-      animation: heartbeat 1s infinite;
-      box-shadow: 0 0 30px rgba(255, 75, 92, 0.3);
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: #ff4b5c;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -75px;
-      left: 0;
-    }
-
-    .heart::after {
-      left: 75px;
-      top: 0;
-    }
-
-    @keyframes heartbeat {
-      0% { transform: rotate(-45deg) scale(1); }
-      25% { transform: rotate(-45deg) scale(1.15); }
-      40% { transform: rotate(-45deg) scale(0.95); }
-      60% { transform: rotate(-45deg) scale(1.1); }
-      100% { transform: rotate(-45deg) scale(1); }
-    }
-
-    .from {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #8a2f40;
-    }
-
-    footer {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: #7a5b64;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 10px;
-      background: #ffb3c1;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #ff99ac;
-    }
-  </style>
-</head>
-<body>
-  <h1>💐 Chúc mừng 20/10 — Gửi Hạnh Nguyên 💐</h1>
-  <p>Một trái tim nhỏ nhưng chứa nhiều lời chúc từ <strong>Minh Anh</strong> tới <strong>Hạnh Nguyên</strong> 💌<br>
-  Chúc em luôn xinh tươi, rạng rỡ và hạnh phúc!</p>
-
-  <div class="heart"></div>
-
-  <div class="from">💖 From: Minh Anh 💖</div>
-
-  <button onclick="toggleHeart()">Tắt/Bật nhịp tim</button>
-
-  <footer>(Nhấn nút nếu muốn dừng nhịp tim nhé)</footer>
-
-  <script>
-    const heart = document.querySelector('.heart');
-    let beating = true;
-    function toggleHeart() {
-      beating = !beating;
-      heart.style.animation = beating ? 'heartbeat 1s infinite' : 'none';
-    }
-  </script>
-</body>
-</html>
+      animation: heartb
