@@ -1,40 +1,116 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chúc mừng 20/10 — Minh Anh gửi Hạnh Nguyên 💖</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #fff0f5, #ffe6eb);
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #4a2b32;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      max-width: 420px;
-      margin: 0 auto 1.5rem;
-      color: #6a4b52;
-    }
-
-    /* TRÁI TIM CHUẨN */
-    .heart {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      background: #ff4b5c;
-      transform: rotate(-45deg);
-      animation: heartb
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Vietnamese Women's Day, chị bé Hạnh Nguyên!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .heart-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 150px; /* Increased heart size */
+            color: #ff4d4d;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        .sparkle1 { top: -20px; left: 20px; animation-delay: 0s; }
+        .sparkle2 { top: 10px; right: -30px; animation-delay: 0.5s; }
+        .sparkle3 { bottom: -10px; left: -20px; animation-delay: 1s; }
+        .sparkle4 { bottom: 20px; right: 10px; animation-delay: 1.5s; }
+        h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 24px;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .petals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .petal {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background: #ff6b6b;
+            border-radius: 50% 50% 0 0;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart-container">
+            <div class="heart">❤️</div>
+            <div class="sparkle sparkle1"></div>
+            <div class="sparkle sparkle2"></div>
+            <div class="sparkle sparkle3"></div>
+            <div class="sparkle sparkle4"></div>
+        </div>
+        <h1>Happy Vietnamese Women's Day!!</h1>
+        <h1>To "chị bé" Nguyên Xù</h1>
+        <p>From Minh Anh, with all my heart 💕</p>
+        <div class="petals" id="petals"></div>
+    </div>
+    <script>
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = Math.random() * 3 + 2 + 's';
+            petal.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('petals').appendChild(petal);
+            setTimeout(() => petal.remove(), 5000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+</body>
+</html>
